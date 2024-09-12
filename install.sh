@@ -1,10 +1,10 @@
 #!/bin/bash
-touch hosts
-cat /etc/hosts >> hosts
-cat /home/batan/hosts/hosts >> hosts
+touch host
+cat /etc/hosts >> host
+cat /home/batan/hosts/hosts >> host
 sudo mv /etc/hosts /etc/hosts.$(date +%j).org
-sudo chown root:root hosts
-sudo mv hosts /etc/hosts
+sudo chown root:root host
+sudo mv host /etc/hosts
 sudo trash /home/batan/hosts
 clear
 echo -e "\033[31mScript executed successfully\033[0m"
