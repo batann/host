@@ -1,11 +1,11 @@
 #!/bin/bash
-touch host
-cat /etc/hosts >> host
-cat /home/batan/hosts/hosts >> host
+touch hosts
+cat /etc/hosts >> hosts
+cat /home/batan/host/hosts >> hosts
 sudo mv /etc/hosts /etc/hosts.$(date +%j).org
-sudo chown root:root host
-sudo mv host /etc/hosts
-sudo trash /home/batan/hosts
+sudo chown root:root hosts
+sudo mv hosts /etc/hosts
+sudo trash /home/batan/host
 clear
 echo -e "\033[31mScript executed successfully\033[0m"
 echo -e "\033[34m Moved original file to \033[31m/etc/hosts.$(date +%j).org\033[0m"
